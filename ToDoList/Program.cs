@@ -31,13 +31,23 @@ namespace WorkSpace
         Main();
       }
       else if (viewInput)
-      { // Continue working on the functionality below to match the functionality we have above in our foreach loop to print out our List<Item> items.
-        Console.WriteLine("Here is your to do list");
-        Item.GetAll();
-      } // add an else {} here to deal with any input from the user that isn't "add" or "view", say something like "please input either add or view, then restart Main();
+      { 
+        // Console.WriteLine(List<Item>)
+        // Continue working on the functionality below to match the functionality we have above in our foreach loop to print out our List<Item> items.
+      Console.WriteLine("Here is your to do list");
+        List<Item> list = Item.GetAll();
+        foreach (Item item in list)
+        {
+          Console.WriteLine(item.Description);
+        }
+      }
+      else
+      {
+        Console.WriteLine("Please enter the exact words add or view with no spaces");
+      }
+    } // add an else {} here to deal with any input from the user that isn't "add" or "view", say something like "please input either add or view, then restart Main();
       // Main();
       
-    }
   }
 }
 
