@@ -2,15 +2,27 @@ using System;
 
 namespace PierreBakery.Models
 {
-  public class Bread
+  public class Loaf
   {
-    public int BreadOrder { get; set; }
-   
-     public Bread(int breadOrder)
+    public int LoafOrder { get; set; }
+  
+    public Loaf(int loafOrder)
     {
-      BreadOrder = breadOrder;
+      LoafOrder = loafOrder;
     }
-   
+  public int LoafOrderPrice()
+  {
+   if (LoafOrder == 1)
+   {
+     int TotalPrice = (LoafOrder) * 5;
+     return TotalPrice;
+   }
+   else
+   {
+     return LoafOrderPrice;
+   }
+
+  }
 
 
   }
