@@ -15,9 +15,10 @@ namespace PierreBakery.Tests
     [TestMethod]
     public void ItemConstructor_CreatesInstanceOfItem_Item()
     {
-      Item newbread = new bread("test");
+      Item newItem = new Item("test");
       Assert.AreEqual(typeof(Item), newItem.GetType());
     }
-   
+  }
+}
 
 
