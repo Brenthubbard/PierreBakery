@@ -26,6 +26,7 @@ namespace PierreBakery.Tests
       int result = newLoafOrder.LoafOrderPrice();
       Assert.AreEqual(5,result);
     // }
+    }
   }
 }
 

@@ -19,7 +19,7 @@ namespace PierreBakery.Models
    }
    else
    {
-     return LoafOrderPrice;
+     return LoafOrderPrice();
    }
 
   }
