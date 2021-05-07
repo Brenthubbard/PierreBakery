@@ -15,7 +15,7 @@ namespace PierreBakery.Tests
     [TestMethod]
     public void LoafConstructor_CreatesInstanceOfLoaf_Loaf()
     {
-      Loaf newLoaf = new Loaf(1);
+      Loaf newLoaf = new Loaf();
       Assert.AreEqual(typeof(Loaf), newLoaf.GetType());
     }
     
