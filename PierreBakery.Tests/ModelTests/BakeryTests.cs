@@ -61,7 +61,7 @@ namespace PierreBakery.Tests
       Pastry newPastryOrder = new Pastry(pastryOrder);
       Loaf newloafOrder = new Loaf(loafOrder);
       int result = newPastryOrder.PastryOrderPrice() + newloafOrder.LoafOrderPrice();
-      Assert.AreEqual(8, result);
+      Assert.AreEqual(7, result);
     }
   }
 }
