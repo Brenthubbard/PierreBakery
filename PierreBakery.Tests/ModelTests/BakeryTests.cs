@@ -6,9 +6,9 @@ using PierreBakery.Models;
 namespace PierreBakery.Tests
 {
   [TestClass]
-  public class BakeryTests 
+  public class BakeryTests
   {
-    
+
     [TestMethod]
     public void LoafConstructor_CreatesInstanceOfLoaf_Loaf()
     {
@@ -21,7 +21,7 @@ namespace PierreBakery.Tests
       int loafOrder = 1;
       Loaf newLoafOrder = new Loaf(loafOrder);
       int result = newLoafOrder.LoafOrderPrice();
-      Assert.AreEqual(5,result);
+      Assert.AreEqual(5, result);
     }
     [TestMethod]
     public void LoafOrderPrice_ReturnsPriceFor3Loaf_int()
@@ -52,6 +52,16 @@ namespace PierreBakery.Tests
       Pastry newPastryOrder = new Pastry(pastryOrder);
       int result = newPastryOrder.PastryOrderPrice();
       Assert.AreEqual(5, result);
+    }
+    [TestMethod]
+    public void CustomerTotalPrice_TotalPriceForBoth_int()
+    {
+      int pastryOrder = 1;
+      int loafOrder = 1;
+      Pastry newPastryOrder = new Pastry(pastryOrder);
+      Loaf newloafOrder = new Loaf(loafOrder);
+      int result = newPastryOrder.PastryOrderPrice() + newloafOrder.LoafOrderPrice();
+      Assert.AreEqual(8, result);
     }
   }
 }
