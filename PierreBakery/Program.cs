@@ -9,6 +9,16 @@ namespace PierreBakery.Models
   {
 public static void Main()
     {
+
+      Console.WriteLine("How many loaves of bread would you like? :");
+      int anything = int.Parse(Console.ReadLine());
+        Loaf loafOrder = new Loaf(anything);
+
+        Console.WriteLine($"{loafOrder.LoafOrderPrice()}");
+
+
+
+
       // Console.WriteLine("Welcome to Pierre's PierreBakery");
       // Console.WriteLine("We have a few specials today.");
       // Console.WriteLine(" We have * Bread 'Buy 2, get 1 free with a single loaf for $5");
