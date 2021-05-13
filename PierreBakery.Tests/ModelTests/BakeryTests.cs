@@ -1,6 +1,6 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
+// using System.Collections.Generic;
 using PierreBakery.Models;
 
 namespace PierreBakery.Tests
@@ -24,9 +24,9 @@ namespace PierreBakery.Tests
       Assert.AreEqual(5,result);
     }
     [TestMethod]
-    public void LoafOrderPrice_ReturnsPriceFor2Loaf_int()
+    public void LoafOrderPrice_ReturnsPriceFor3Loaf_int()
     {
-      int loafOrder = 2;
+      int loafOrder = 3;
       Loaf newLoafOrder = new Loaf(loafOrder);
       int result = newLoafOrder.LoafOrderPrice();
       Assert.AreEqual(10, result);
@@ -35,16 +35,9 @@ namespace PierreBakery.Tests
     public void PastryConstructor_CreateInstanceOfPastry_Pastry()
     {
       Pastry newPastry = new Pastry();
-      Assert.AreEqual(typeof(Pastry), newPastry.GetType);
+      Assert.AreEqual(typeof(Pastry), newPastry.GetType());
     }
-    [TestMethod]
-    public void PastryOrderPrice_ReturnsPriceFor1Pastry_int()
-    {
-      int pastryOrder = 1;
-      Pastry newPastryOrder = new Pastry(pastryOrder);
-      int result = newPastryOrder.PastryOrderPrice();
-      Assert.AreEqual(2, result);
-    }
+   
   }
 }
 
